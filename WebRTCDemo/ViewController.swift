@@ -41,7 +41,7 @@ class ViewController: UIViewController,OMGRTCClientDelegate,RTCEAGLVideoViewDele
         let n = Int(arc4random_uniform(11142))
         let name = String(n)
         rtcManager = RTCClient(videoCall: true)
-        clientServer = RTCVideoServer(url: "ws://47.52.74.55:16210/ws", client: rtcManager!)
+        clientServer = RTCVideoServer(url: "", client: rtcManager!)
         rtcOperator = WebRTCOperator(delegate: self,omgSocket: clientServer!)
         rtcManager?.delegate = rtcOperator
         clientServer?.registerMeetRoom("114", clientId: name)
